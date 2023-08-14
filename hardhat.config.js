@@ -41,41 +41,14 @@ const config = {
             allowUnlimitedContractSize: false,
             blockGasLimit: 500e9,
         },
-        // Mainnet chains
-        ethereum: {
-            url: process.env.ETHEREUM_RPC,
-            accounts: [process.env.SYSTEM_PRIVATE_KEY],
-        },
-        binance: {
-            url: process.env.BINANCE_RPC,
-            accounts: [process.env.SYSTEM_PRIVATE_KEY],
-        },
-        polygon: {
-            url: process.env.POLYGON_RPC,
-            accounts: [process.env.SYSTEM_PRIVATE_KEY],
-        },
-        // Testnet chains
-        goerli: {
-            url: process.env.GOERLI_RPC,
-            accounts: [process.env.SYSTEM_TEST_PRIVATE_KEY],
-        },
         binance_testnet: {
-            url: process.env.BINANCE_TESTNET_RPC,
-            accounts: [process.env.SYSTEM_TEST_PRIVATE_KEY],
-        },
-        mumbai: {
-            url: process.env.MUMBAI_RPC,
-            accounts: [process.env.SYSTEM_TEST_PRIVATE_KEY],
+            url: process.env.BSCT_RPC,
+            accounts: [process.env.SYSTEM_PRIVATE_KEY],
         },
     },
     etherscan: {
         apiKey: {
-            mainnet: process.env.ETHER_API_KEY,
-            bsc: process.env.BINANCE_API_KEY,
-            polygon: process.env.POLYGON_API_KEY,
-            goerli: process.env.STAGING_ETHER_API_KEY,
-            bscTestnet: process.env.STAGING_BINANCE_API_KEY,
-            polygonMumbai: process.env.STAGING_POLYGON_API_KEY,
+            bsc: process.env.BSC_API_KEY,
         },
     },
     solidity: {
@@ -118,7 +91,6 @@ const config = {
         currency: "USD",
         token: "BNB",
         gasPrice: 30,
-        coinmarketcap: process.env.COIN_MARKET_API,
     },
     exposed: { prefix: "$" },
 };
