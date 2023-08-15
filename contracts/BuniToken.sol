@@ -17,7 +17,7 @@ contract BuniToken is Ownable, ERC20("Buni Token", "BUNI") {
     event AddMinter(address minter);
     event RevokeMinter(address minter);
 
-    constructor() public {
+    constructor() {
         addMinter(msg.sender);
     }
 

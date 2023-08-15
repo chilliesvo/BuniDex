@@ -3,6 +3,7 @@ pragma solidity 0.8.18;
 
 library Helper {
     function safeTransferNative(address _to, uint256 _value) internal {
+        // slither-disable-next-line unchecked-lowlevel
         (bool success, ) = _to.call{value: _value}(new bytes(0));
         require(success, "SafeTransferNative: transfer failed");
     }
