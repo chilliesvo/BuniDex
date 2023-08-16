@@ -22,13 +22,8 @@ require("@nomiclabs/hardhat-solhint");
 // Verify and public source code on etherscan
 require("@nomiclabs/hardhat-etherscan");
 
-require("@openzeppelin/hardhat-upgrades");
-
 // Report gas
 require("hardhat-gas-reporter");
-
-// Expose internal functions for smart contract testing
-require("hardhat-exposed");
 
 // This plugin adds ways to ignore Solidity warnings
 require("hardhat-ignore-warnings");
@@ -54,7 +49,16 @@ const config = {
     solidity: {
         compilers: [
             {
-                version: "0.8.18",
+                version: "0.6.12",
+                settings: {
+                    optimizer: {
+                        enabled: true,
+                        runs: 200,
+                    },
+                },
+            },
+            {
+                version: "0.5.12",
                 settings: {
                     optimizer: {
                         enabled: true,
