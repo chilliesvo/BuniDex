@@ -1,0 +1,68 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "prettier",
+    "plugin:tailwindcss/recommended"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "prettier/prettier": [
+      "warn"
+    ],
+    "react/react-in-jsx-scope": [
+      0
+    ],
+    "import/prefer-default-export": [
+      0
+    ],
+    "import/extensions": [
+      0
+    ],
+    "react/function-component-definition": [
+      0
+    ],
+    "tailwindcss/no-custom-classname": [
+      0
+    ],
+    "no-console": [
+      "warn"
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "warn"
+    ],
+    "react-hooks/exhaustive-deps": [
+      0
+    ],
+    "no-restricted-exports": [
+      "off"
+    ],
+    "react/jsx-props-no-spreading": [
+      "off"
+    ],
+    "arrow-body-style": [
+      "off"
+    ],
+    "react/self-closing-comp": [
+      "off"
+    ],
+    "jsx-a11y/click-events-have-key-events": [
+      "off"
+    ],
+    "jsx-a11y/no-static-element-interactions": [
+      "off"
+    ]
+  }
+}

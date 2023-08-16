@@ -1,0 +1,13 @@
+.root {
+  div[class*='ant-select-selector'] {
+    border: 0 !important;
+  }
+
+  span[class*='ant-select-arrow'] {
+    display: none;
+  }
+
+  span[class*='ant-select-selection-item'] {
+    padding-inline-end: 10px!important;
+  }
+}
