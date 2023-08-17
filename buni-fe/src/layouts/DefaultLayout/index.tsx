@@ -1,10 +1,10 @@
+import { Breadcrumb, Layout, theme } from 'antd';
 import React, { useState } from 'react';
-import { Layout, theme, Breadcrumb } from 'antd';
 import { Outlet } from 'react-router-dom';
-import Menu from './menu';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
-import UserMenu from './userMenu';
 import UserNotification from '@/components/UserNotification';
+import Menu from './menu';
+import UserMenu from './userMenu';
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -22,13 +22,13 @@ const App: React.FC = () => {
         onCollapse={(value) => setCollapsed(value)}
       >
         <div className="flex w-full items-center justify-center p-3">
-          <img src="/logo.png" height="30px" alt="header logo" />
+          <img src="/logo.svg" height="30px" alt="header logo" />
         </div>
         <Menu />
       </Sider>
       <Layout>
         <Header
-          style={{ padding: 0, background: colorBgContainer }}
+          style={{ padding: 0, background: "#f9801a" }}
           className="flex items-center justify-between !px-[24px]"
         >
           <div className="left">
@@ -63,7 +63,7 @@ const App: React.FC = () => {
           </div>
         </Content>
         <Footer style={{ textAlign: 'center' }}>
-          Ant Design ©2023 Created by Ant UED
+          Ant Design ©2023 Created by Ant
         </Footer>
       </Layout>
     </Layout>
