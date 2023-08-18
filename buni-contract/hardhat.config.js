@@ -44,6 +44,7 @@ const config = {
     etherscan: {
         apiKey: {
             bsc: process.env.BSC_API_KEY,
+            bscTestnet: process.env.TBSC_API_KEY,
         },
     },
     solidity: {

@@ -6,6 +6,8 @@
     "test-coverage": "hh coverage --testfiles 'test/**/*.test.js'",
     "test-integration": "hh test test/integration/*.test.js",
     "deploy-local": "hh run scripts/deploy.js --network localhost",
+    "deploy": "hh run scripts/deploy.js --network binance_testnet",
+    "verify": "hh run scripts/verify.js --network binance_testnet",
     "lint": "solhint 'contracts/*.sol'",
     "lint:fix": "solhint 'contracts/**/*.sol' --fix",
     "format": "prettier --write .",

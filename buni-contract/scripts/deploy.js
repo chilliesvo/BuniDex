@@ -1,11 +1,6 @@
 const { ethers } = require("hardhat");
-const {
-    deployProxyAndLogger,
-    contractFactoriesLoader,
-} = require("../utils/deploy.utils");
-const { blockTimestamp } = require("../utils/utils");
+const { blockTimestamp, ZERO_ADDRESS } = require("../utils/utils");
 require("dotenv").config();
-const env = process.env;
 const fs = require("fs");
 
 async function main() {
@@ -20,7 +15,6 @@ async function main() {
     const deployer = addresses[0];
 
     //* Loading contract factory */
-    const contractFactories = await contractFactoriesLoader();
 
     //* Deploy contracts */
     const underline = "=".repeat(93);
@@ -38,10 +32,50 @@ async function main() {
         deployer,
     };
 
-    const constructorParams = [];
-    const contractInstance = await deployProxyAndLogger(contractFactories.contract, constructorParams);
-    verifyArguments.contractInstance = contractInstance.address;
-    verifyArguments.contractInstanceVerify = contractInstance.addressVerify;
+    // const BToken = await ethers.getContractFactory("BToken");
+    // const bToken = await BToken.deploy();
+    // verifyArguments.bToken = bToken.address;
+
+    // const BFactory = await ethers.getContractFactory("BFactory");
+    // const bFactory = await BFactory.deploy();
+    // verifyArguments.bFactory = bFactory.address;
+
+    //** libraries */
+    // const BuniSafeMath = await ethers.getContractFactory("BuniSafeMath");
+    // const buniSafeMath = await BuniSafeMath.deploy();
+    // verifyArguments.buniSafeMath = buniSafeMath.address;
+
+    // const RightsManager = await ethers.getContractFactory("RightsManager");
+    // const rightsManager = await RightsManager.deploy();
+    // verifyArguments.rightsManager = rightsManager.address;
+
+    // const SmartPoolManager = await ethers.getContractFactory("SmartPoolManager");
+    // const smartPoolManager = await SmartPoolManager.deploy();
+    // verifyArguments.smartPoolManager = smartPoolManager.address;
+
+    // const CRPFactory = await ethers.getContractFactory("CRPFactory", {
+    //     libraries: {
+    //         BuniSafeMath: buniSafeMath.address,
+    //         RightsManager: rightsManager.address,
+    //         SmartPoolManager: smartPoolManager.address,
+    //     }
+    // });
+    // const crpFactory = await CRPFactory.deploy();
+    // verifyArguments.crpFactory = crpFactory.address;
+
+    // const BActions = await ethers.getContractFactory("BActions");
+    // const bActions = await BActions.deploy();
+    // verifyArguments.bActions = bActions.address;
+
+    // const weth = "0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd";
+    // const ExchangeProxy = await ethers.getContractFactory("ExchangeProxy");
+    // const exchangeProxy = await ExchangeProxy.deploy(weth);
+    // verifyArguments.exchangeProxy = exchangeProxy.address;
+
+    // const bFactoryDeployed = "0xDC8E950d2669a9ad62446DDa00bDCf2017e39Fd3";
+    // const KRegistry = await ethers.getContractFactory("KRegistry");
+    // const kRegistry = await KRegistry.deploy(bFactoryDeployed);
+    // verifyArguments.kRegistry = kRegistry.address;
 
     console.log(underline);
     console.log("DONE");

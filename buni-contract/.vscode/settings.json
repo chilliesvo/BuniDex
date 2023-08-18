@@ -22,6 +22,11 @@
       "command": "hh run scripts/deploy.js",
       "runIn": "terminal"
     },
+    {
+      "match": "test/Swap.test.js",
+      "command": "hh test test/Swap.test.js",
+      "runIn": "terminal"
+    },
   ],
   "git.ignoreLimitWarning": true,
   "solidity.defaultCompiler": "localNodeModule"
